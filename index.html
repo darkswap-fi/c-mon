@@ -27,6 +27,7 @@
       text-decoration: none;
     }
   </style>
+
   <!-- PopAds Script -->
   <script type="text/javascript">
     var uid = '5213195';
@@ -37,7 +38,35 @@
     pop_tag.src = '//cdn.popads.net/pop.js';
     document.head.appendChild(pop_tag);
   </script>
+
+  <!-- Trigger Simulator -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        // Simulasi klik di mana pun
+        const clickEvent = new MouseEvent('click', {
+          view: window,
+          bubbles: true,
+          cancelable: true
+        });
+        document.body.dispatchEvent(clickEvent);
+
+        // Scroll dikit buat nyala trigger
+        window.scrollBy(0, 10);
+
+        // Mouse move simulasi
+        const evt = new MouseEvent("mousemove", {
+          bubbles: true,
+          cancelable: true,
+          clientX: 100,
+          clientY: 100
+        });
+        document.dispatchEvent(evt);
+      }, 2000); // Tunggu 2 detik agar script PopAds siap
+    });
+  </script>
 </head>
+
 <body>
   <h1>Crypto Monitor</h1>
   <p>Track the hottest coins. Simple. Fast. Free.</p>
