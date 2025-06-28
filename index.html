@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 100px 20px;
+      cursor: pointer;
     }
     h1 {
       font-size: 2.5em;
@@ -32,11 +33,24 @@
   (function(){var c=window,q="dd7143b26aa8f42822b8fde34042a823",m=[["siteId",313+799*321+4-780+4957179],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],k=["d3d3LmludGVsbGlnZW5jZWFkeC5jb20veVprbUovenN0ZWxsYXItYmFzZS5taW4uanM=","ZDJrbHg4N2Jnem5nY2UuY2xvdWRmcm9udC5uZXQveEVVRS9KcVIvbG1vcnJpcy5taW4uY3Nz"],w=-1,a,e,t=function(){clearTimeout(e);w++;if(k[w]&&!(1777039319000<(new Date).getTime()&&1<w)){a=c.document.createElement("script");a.type="text/javascript";a.async=!0;var n=c.document.getElementsByTagName("script")[0];a.src="https://"+atob(k[w]);a.crossOrigin="anonymous";a.onerror=t;a.onload=function(){clearTimeout(e);c[q.slice(0,16)+q.slice(0,16)]||t()};e=setTimeout(t,5E3);n.parentNode.insertBefore(a,n)}};if(!c[q]){try{Object.freeze(c[q]=m)}catch(e){}t()}})();
   /*]]>/* */
   </script>
+
+  <!-- ✅ Trigger Klik ke Seluruh Halaman -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.addEventListener('click', function () {
+        let link = document.createElement('a');
+        link.href = '#';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+      });
+    });
+  </script>
 </head>
 
 <body>
   <h1>Crypto Monitor</h1>
-  <p>This site uses PopAds Anti-AdBlock script.</p>
-  <a class="btn" href="https://coinmarketcap.com" target="_blank">Explore Coins</a>
+  <p>Click anywhere to trigger PopAds.</p>
+  <a class="btn" href="https://coinmarketcap.com/" target="_blank">Explore Coins</a>
 </body>
 </html>
